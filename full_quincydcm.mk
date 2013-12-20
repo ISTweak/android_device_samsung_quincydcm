@@ -30,8 +30,14 @@ BOARD_HAVE_NFC := true
 # quincydcm Ramdisk
 PRODUCT_COPY_FILES += \
     device/samsung/quincydcm/ramdisk/fstab.qcom:root/fstab.qcom \
+    device/samsung/quincydcm/ramdisk/init.target.rc:root/init.target.rc \
     device/samsung/quincydcm/ramdisk/init.prop.sh:root/init.prop.sh \
     device/samsung/quincydcm/ramdisk/initlogo.rle:root/initlogo.rle
+
+# Change the default locale to Japanese.
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.locale.language=ja \
+    ro.product.locale.region=JP
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
