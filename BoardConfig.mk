@@ -20,7 +20,7 @@
 # definition file).
 #
 
-# inherit from common msm8660
+# inherit from common quincy
 -include device/samsung/quincy-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
@@ -41,11 +41,14 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00A00000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 536870912
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 536870912
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/quincydcm/bluetooth
+
+# Recovery
+BOARD_RECOVERY_SWIPE := true
 
 # secondary sdcard
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p29
