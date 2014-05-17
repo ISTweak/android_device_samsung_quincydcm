@@ -1,2 +1,2 @@
-add_lunch_combo cm_quincydcm-eng
+add_lunch_combo liquid_quincydcm-userdebug
 

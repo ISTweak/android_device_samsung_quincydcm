@@ -1,5 +1,9 @@
+#
 # system.prop for SC-05D
 #
+#
+lpa.use-stagefright=true
+lpa.decode=true
 
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
@@ -16,6 +20,9 @@ ril.subscription.types=NV,RUIM
 
 dev.pm.dyn_samplingrate=1
 
+# Disable GC freed lines
+dalvik.vm.debug.alloc=0
+
 #system props for the MM modules
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
@@ -23,8 +30,6 @@ media.stagefright.enable-fma2dp=false
 media.stagefright.enable-aac=true
 media.stagefright.enable-qcp=true
 
-lpa.decode=true
-lpa.use-stagefright=true
 
 #
 # system props for the data modules
@@ -85,3 +90,5 @@ ro.config.libemoji=libemoji_docomo.so
 # HDMI
 com.qc.hdmi_out=true
 ro.hdmi.enable=true
+
+persist.sys.usb.config=mtp

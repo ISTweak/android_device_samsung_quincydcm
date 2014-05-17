@@ -1,0 +1,38 @@
+[
+  {
+    "remote":      "gh",
+    "repository":  "kbc-developers/android_device_samsung_msm8660-common",
+    "target_path": "device/samsung/msm8660-common",
+    "revision":    "cm-11.0"
+  },
+  {
+    "remote":      "gh",     
+    "repository":  "kbc-developers/android_device_samsung_qcom-common",
+    "target_path": "device/samsung/qcom-common",
+    "revision":    "cm-11.0"
+  },
+  {
+    "remote":      "gh",     
+    "repository":  "kbc-developers/android_device_samsung_quincy-common",
+    "target_path": "device/samsung/quincy-common",
+    "revision":    "cm-11.0"
+  },
+  {
+    "remote":      "gh",      
+    "repository":  "ISTweak/android_kernel_samsung_msm8660",
+    "target_path": "kernel/samsung/msm8660",
+    "revision":    "cm-11.0"
+  },
+  {
+    "remote":      "gh",   
+    "repository":  "aojp/android_hardware_samsung",
+    "target_path": "hardware/samsung",
+    "revision":    "cm-11.0"
+  },
+  {
+    "remote":      "cm",
+    "repository":  "android_packages_apps_SamsungServiceMode",
+    "target_path": "packages/apps/SamsungServiceMode",
+    "revision":    "cm-11.0"
+  }
+]
