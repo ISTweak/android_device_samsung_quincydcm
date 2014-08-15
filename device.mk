@@ -24,6 +24,11 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/quincydcm/overlay
 PRODUCT_COPY_FILES += \
     device/samsung/quincydcm/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
 
+# Japanese font
+PRODUCT_COPY_FILES += \
+    device/samsung/quincydcm/overlay/frameworks/base/data/fonts/fallback_fonts.xml:system/vendor/etc/fallback_fonts.xml \
+	frameworks/base/data/fonts/DroidSansJapanese.ttf:system/fonts/DroidSansJapanese.ttf
+	
 # F2FS
 PRODUCT_PACKAGES += \
     mkfs.f2fs \

@@ -21,6 +21,7 @@
 #
 
 # inherit from common quincy
+TWRP := true
 -include device/samsung/quincy-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
@@ -35,7 +36,8 @@ TARGET_OTA_ASSERT_DEVICE := SC-05D,quincydcm
 # Kernel
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660
 TARGET_KERNEL_CONFIG        := liquid_quincydcm_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := sm-arm-eabi-4.7
+TARGET_GCC_VERSION_ARM := 4.7-sm
+TARGET_GCC_VERSION_AND := 4.8-sm
 
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -61,7 +63,8 @@ DEVICE_RESOLUTION := 800x1280
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-#TARGET_RECOVERY_FSTAB := device/samsung/quincydcm/recovery.fstab
+
+TARGET_RECOVERY_INITRC := device/samsung/quincydcm/recovery/init.rc
 
 TW_INTERNAL_STORAGE_PATH := "/sdcard"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
@@ -71,6 +74,3 @@ TW_FLASH_FROM_STORAGE := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_EXFAT := true
-SP1_NAME := "efs"
-SP1_BACKUP_METHOD := files
-SP1_MOUNTABLE := 1

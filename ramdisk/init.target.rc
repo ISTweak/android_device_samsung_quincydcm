@@ -337,12 +337,13 @@ service ril-daemon /system/bin/rild
     socket rild stream 660 root radio
     socket rild-debug stream 660 radio system
     user root
-    group radio cache inet misc audio sdcard_rw qcom_oncrpc qcom_diag log
+    group radio cache inet misc audio sdcard_r sdcard_rw qcom_oncrpc diag qcom_diag log
 
 service secril-daemon /system/bin/sec-ril
     class main
     user root
-    group radio cache inet misc audio sdcard_rw qcom_diag log
+    group radio cache inet misc audio sdcard_rw diag log
+
 
 service kickstart /system/bin/qcks l
     oneshot
@@ -385,7 +386,7 @@ service thermald /system/bin/thermald
     group root
     disabled
 
-on property.ro.modem.links.done=1
+on property:ro.modem.links.done=1
     start thermald
 
 # qrngd will drop permissions after startup
