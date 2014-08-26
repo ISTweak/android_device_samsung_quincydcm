@@ -22,12 +22,17 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/quincydcm/overlay
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/quincydcm/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/samsung/quincydcm/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
 
-# Vold configuration
+# BT firmware
 PRODUCT_COPY_FILES += \
-    device/samsung/quincydcm/vold.fstab:system/etc/vold.fstab
+    device/samsung/quincydcm/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
 
+# Japanese font
+PRODUCT_COPY_FILES += \
+    device/samsung/quincydcm/fallback_fonts.xml:system/vendor/etc/fallback_fonts.xml \
+	frameworks/base/data/fonts/DroidSansJapanese.ttf:system/fonts/DroidSansJapanese.ttf
+	
 # Inherit from quincy-common
 $(call inherit-product, device/samsung/quincy-common/quincy-common.mk)
 

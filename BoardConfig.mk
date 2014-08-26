@@ -20,7 +20,7 @@
 # definition file).
 #
 
-# inherit from common msm8660
+# inherit from common quincy
 -include device/samsung/quincy-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
@@ -32,21 +32,23 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
 TARGET_OTA_ASSERT_DEVICE := SC-05D,quincydcm
 
 # Kernel
-TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660
 TARGET_KERNEL_CONFIG        := cyanogenmod_quincydcm_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro47x
-TARGET_KERNEL_CUSTOM_TOOLCHAIN_SUFFIX := arm-eabi
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-arm-cortex-a8
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN_SUFFIX := arm-cortex_a8-linux-gnueabi
+TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660
+
+# Assert minimum baseband version
+TARGET_BOARD_INFO_FILE ?= device/samsung/quincydcm/board-info.txt
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00A00000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1610612736
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/quincydcm/bluetooth
+
+# Recovery
+BOARD_RECOVERY_SWIPE := true
 
 # secondary sdcard
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p29
