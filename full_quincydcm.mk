@@ -32,7 +32,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/quincydcm/ramdisk/fstab.qcom:root/fstab.qcom \
     device/samsung/quincydcm/ramdisk/init.target.rc:root/init.target.rc \
     device/samsung/quincydcm/ramdisk/init.prop.sh:root/init.prop.sh \
-    device/samsung/quincydcm/ramdisk/initlogo.rle:root/initlogo.rle
+    device/samsung/quincydcm/ramdisk/initlogo.rle:root/initlogo.rle \
+    device/samsung/quincydcm/recovery/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
 PRODUCT_COPY_FILES += \
     device/samsung/quincydcm/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
