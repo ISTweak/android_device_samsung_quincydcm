@@ -6,3 +6,4 @@
 /cache      ext4        /dev/block/mmcblk0p26
 /sdcard     vfat        /dev/block/mmcblk0p29
 /external_sd auto        /dev/block/mmcblk1p1    /dev/block/mmcblk1
+/usb-otg	vfat		/dev/block/sda1			/dev/block/sda
