@@ -36,7 +36,7 @@ TARGET_OTA_ASSERT_DEVICE := SC-05D,quincydcm
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom usb_id_pin_rework=true no_console_suspend=true zcache androidboot.selinux=permissive
 TARGET_KERNEL_CONFIG := cyanogenmod_quincyatt_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8660
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin
+#KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7-sm/bin
 
 # Partitions
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -67,7 +67,5 @@ TARGET_USERIMAGES_USE_F2FS := true
 TW_FLASH_FROM_STORAGE := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_REBOOT_BOOTLOADER := true
-TW_NO_EXFAT := true
 TW_NO_USB_STORAGE := true
-TW_NO_EXFAT := true
 TW_NO_SCREEN_TIMEOUT := true
