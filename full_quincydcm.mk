@@ -31,6 +31,10 @@ PRODUCT_COPY_FILES += \
     device/samsung/quincydcm/recovery/twrp.fstab:recovery/root/etc/twrp.fstab \
     device/samsung/quincydcm/recovery/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
+# Ramdisk
+PRODUCT_COPY_FILES += \
+    device/samsung/quincydcm/ramdisk/etc/initlogo.rle:root/initlogo.rle
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from quincydcm device

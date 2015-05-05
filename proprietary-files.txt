@@ -75,3 +75,4 @@ lib/libemoji_docomo.so
 fonts/truetypeEmoji.ttf
 lib/libdhwr.so
 lib/libdhwrex.so
+lib/libcordon.so
