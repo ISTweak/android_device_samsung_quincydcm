@@ -40,7 +40,6 @@ BOARD_KERNEL_PAGESIZE       := 2048
 BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01600000
 TARGET_KERNEL_CONFIG        := cyanogenmod_quincydcm_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8-sm/bin
 
 # Assert minimum baseband version
 TARGET_BOARD_INFO_FILE ?= device/samsung/quincydcm/board-info.txt
